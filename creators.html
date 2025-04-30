@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Content Creators - Axetron</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0b0b0b;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #f1c40f33;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    header h2 {
+      color: #f1c40f;
+      font-size: 24px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 20px;
+      background: linear-gradient(120deg, #000, #111);
+      animation: fadeIn 2s ease;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      color: #f1c40f;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #ccc;
+      font-size: 16px;
+    }
+
+    .creators {
+      max-width: 1200px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .creator-card {
+      background: #111;
+      border: 1px solid #f1c40f22;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px #00000055;
+      transform: translateY(50px);
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+
+    .creator-card.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .creator-card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .creator-card h3 {
+      color: #f1c40f;
+      margin-bottom: 5px;
+    }
+
+    .creator-card p {
+      color: #bbb;
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: #f1c40f22;
+      color: #f1c40f;
+      padding: 5px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #aaa;
+      border-top: 1px solid #f1c40f33;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>ATR Creators</h2>
+    <img src="atr.png" alt="ATR Logo">
+  </header>
+
+  <section class="hero">
+    <h1>🎥 Content Creators</h1>
+    <p>Meet the faces behind the fire streams</p>
+  </section>
+
+  <section class="creators" id="creatorSection">
+    <!-- Creator 1 -->
+    <div class="creator-card">
+      <img src="creator1.jpg" alt="KiKi">
+      <h3>KiKi</h3>
+      <p>Streamer & Analyst</p>
+      <div class="badges">
+        <span class="badge">YouTube</span>
+        <span class="badge">Facebook Gaming</span>
+      </div>
+    </div>
+
+    <!-- Creator 2 -->
+    <div class="creator-card">
+      <img src="creator2.jpg" alt="Rafi">
+      <h3>Rafi</h3>
+      <p>Content King</p>
+      <div class="badges">
+        <span class="badge">TikTok</span>
+        <span class="badge">YouTube Shorts</span>
+      </div>
+    </div>
+
+    <!-- Creator 3 -->
+    <div class="creator-card">
+      <img src="creator3.jpg" alt="Ayra">
+      <h3>Ayra</h3>
+      <p>Gaming + Lifestyle</p>
+      <div class="badges">
+        <span class="badge">Twitch</span>
+        <span class="badge">Instagram</span>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Axetron Gaming — All Rights Reserved.
+  </footer>
+
+  <script>
+    const cards = document.querySelectorAll('.creator-card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>

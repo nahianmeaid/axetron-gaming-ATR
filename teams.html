@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Esports Teams - Axetron</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0a0a0a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: #000;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #f1c40f33;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    header h2 {
+      color: #f1c40f;
+      font-size: 24px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 20px;
+      background: linear-gradient(120deg, #000, #1a1a1a);
+      animation: fadeIn 2s ease;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      color: #f1c40f;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      color: #ccc;
+      font-size: 16px;
+    }
+
+    .teams {
+      max-width: 1200px;
+      margin: 50px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #111;
+      border: 1px solid #f1c40f22;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 0 10px #00000055;
+      transform: translateY(50px);
+      opacity: 0;
+      transition: all 0.6s ease;
+    }
+
+    .card.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    .card img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      color: #f1c40f;
+      margin: 10px 0 5px;
+    }
+
+    .card p {
+      color: #aaa;
+      font-size: 14px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #aaa;
+      border-top: 1px solid #f1c40f33;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Axetron Teams</h2>
+    <img src="atr.png" alt="ATR Logo">
+  </header>
+
+  <section class="hero">
+    <h1>🎮 Esports Teams</h1>
+    <p>Our competitive squads across various titles</p>
+  </section>
+
+  <section class="teams" id="teamSection">
+    <!-- Team Card 1 -->
+    <div class="card">
+      <img src="team-pubg.jpg" alt="PUBG Team">
+      <h3>PUBG MOBILE</h3>
+      <p>Our flagship roster that conquered PMNC BD 2025.</p>
+    </div>
+
+    <!-- Team Card 2 -->
+    <div class="card">
+      <img src="team-valo.jpg" alt="Valorant Team">
+      <h3>VALORANT</h3>
+      <p>Strategic beasts in FPS action — planting bombs with brains & bullets!</p>
+    </div>
+
+    <!-- Team Card 3 -->
+    <div class="card">
+      <img src="team-cod.jpg" alt="COD Team">
+      <h3>COD MOBILE</h3>
+      <p>Fast-paced fraggers with insane clutch potential.</p>
+    </div>
+
+    <!-- Add more cards as needed -->
+  </section>
+
+  <footer>
+    &copy; 2025 Axetron Gaming — All Rights Reserved.
+  </footer>
+
+  <script>
+    // Scroll animation
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.classList.add('show');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+
+</body>
+</html>

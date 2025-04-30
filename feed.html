@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Esports Feed - Axetron</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+    }
+
+    header {
+      background: #000;
+      color: #f1c40f;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #f1c40f33;
+    }
+
+    header img {
+      height: 40px;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px 20px;
+      background: linear-gradient(120deg, #000, #1a1a1a);
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      color: #f1c40f;
+    }
+
+    .feed-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .feed-item {
+      background: #111;
+      border-left: 4px solid #f1c40f;
+      margin-bottom: 20px;
+      padding: 20px;
+      border-radius: 10px;
+      transition: 0.3s ease;
+    }
+
+    .feed-item:hover {
+      background: #1c1c1c;
+    }
+
+    .feed-item h3 {
+      margin-top: 0;
+      color: #f1c40f;
+    }
+
+    .feed-item p {
+      color: #ccc;
+      font-size: 15px;
+    }
+
+    .timestamp {
+      font-size: 13px;
+      color: #888;
+      margin-top: 10px;
+    }
+
+    footer {
+      background: #000;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      border-top: 1px solid #f1c40f33;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h2>Axetron Feed</h2>
+    <img src="atr.png" alt="ATR Logo" />
+  </header>
+
+  <section class="hero">
+    <h1>🎮 Esports Feed</h1>
+    <p>Latest Matches, Announcements & Highlights</p>
+  </section>
+
+  <div class="feed-container">
+
+    <div class="feed-item">
+      <h3>🚨 ATR wins PMNC BD Grand Finals!</h3>
+      <p>Axetron Gaming secures the #1 spot at PMNC BD 2025 with a dominating performance in all maps. MVP: Niloy 🔥</p>
+      <div class="timestamp">April 20, 2025</div>
+    </div>
+
+    <div class="feed-item">
+      <h3>📣 New Roster Reveal: ATR X Deadeye Returns</h3>
+      <p>Deadeye officially rejoins Axetron's primary PUBG Mobile lineup after a strategic break. Expect chaos. ☠️</p>
+      <div class="timestamp">April 15, 2025</div>
+    </div>
+
+    <div class="feed-item">
+      <h3>🎥 Documentary Trailer “Rise of ATR” Now Live</h3>
+      <p>A behind-the-scenes look at how ATR became a dominant name in Bangladesh esports. Watch on YouTube now!</p>
+      <div class="timestamp">April 12, 2025</div>
+    </div>
+
+    <!-- More feed items can go here -->
+
+  </div>
+
+  <footer>
+    &copy; 2025 Axetron Gaming — All Rights Reserved.
+  </footer>
+
+</body>
+</html>

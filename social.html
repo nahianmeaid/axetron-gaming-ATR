@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - Axetron Gaming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #0a0a0a;
+      font-family: 'Segoe UI', sans-serif;
+      color: #f5f5f5;
+      margin: 0;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #000;
+      border-bottom: 1px solid #f1c40f33;
+    }
+
+    header h1 {
+      color: #f1c40f;
+    }
+
+    .hero {
+      background: url('contact-bg.jpg') center/cover no-repeat;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      top: 0; left: 0;
+    }
+
+    .hero h2 {
+      position: relative;
+      color: #f1c40f;
+      font-size: 36px;
+      z-index: 1;
+      animation: dropIn 1.2s ease;
+    }
+
+    @keyframes dropIn {
+      from {opacity: 0; transform: translateY(-30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #111;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #f1c40f22;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      background: #222;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+    }
+
+    .contact-form button {
+      padding: 10px 20px;
+      background: #f1c40f;
+      border: none;
+      color: #000;
+      font-weight: bold;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      border-top: 1px solid #f1c40f33;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AXETRON GAMING</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Contact Us</h2>
+  </section>
+
+  <div class="contact-form">
+    <input type="text" placeholder="Your Name" />
+    <input type="email" placeholder="Your Email" />
+    <textarea rows="5" placeholder="Your Message"></textarea>
+    <button>Send Message</button>
+  </div>
+
+  <footer>&copy; 2025 Axetron Gaming</footer>
+
+</body>
+</html>
+✅ 3️⃣ social.html – Social Hub (Optional)
+html
+Copy
+Edit
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Social Hub - Axetron Gaming</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      background: #0a0a0a;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      margin: 0;
+    }
+
+    header {
+      text-align: center;
+      background: #000;
+      padding: 20px;
+      border-bottom: 1px solid #f1c40f33;
+    }
+
+    header h1 {
+      color: #f1c40f;
+    }
+
+    .hero {
+      background: url('social-bg.jpg') center/cover no-repeat;
+      height: 40vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    .hero h2 {
+      position: relative;
+      color: #f1c40f;
+      z-index: 1;
+      font-size: 34px;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 40px;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      text-decoration: none;
+      color: #f1c40f;
+      font-size: 22px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #000;
+      color: #aaa;
+      font-size: 14px;
+      border-top: 1px solid #f1c40f33;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>AXETRON GAMING</h1>
+  </header>
+
+  <section class="hero">
+    <h2>Join Our Social Hub</h2>
+  </section>
+
+  <div class="social-icons">
+    <a href="#" target="_blank">Facebook</a>
+    <a href="#" target="_blank">Instagram</a>
+    <a href="#" target="_blank">YouTube</a>
+    <a href="#" target="_blank">Discord</a>
+    <a href="#" target="_blank">TikTok</a>
+  </div>
+
+  <footer>&copy; 2025 Axetron Gaming</footer>
+
+</body>
+</html>
